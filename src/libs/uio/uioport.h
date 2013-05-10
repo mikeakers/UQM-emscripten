@@ -48,7 +48,8 @@
 #elif defined(_WIN32_WCE)
 #	include <sys/syslimits.h>
 #else
-#	include <limits.h>
+//#	include <limits.h>
+#include <sys/syslimits.h>
 		/* PATH_MAX is per POSIX defined in <limits.h>, but:
 		 * "A definition of one of the values from Table 2.6 shall bea
 		 * omitted from <limits.h> on specific implementations where the
