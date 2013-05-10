@@ -17,6 +17,8 @@
 /* Ogg Vorbis decoder (.ogg adapter)
  */
 
+ /*
+
 #include <stdio.h>
 #include <string.h>
 #include <errno.h>
@@ -31,7 +33,7 @@
 #else
 #	include <vorbis/codec.h>
 #	include <vorbis/vorbisfile.h>
-#endif  /* OVCODEC_TREMOR */
+#endif  /* OVCODEC_TREMOR *-/
 #include "oggaud.h"
 
 
@@ -205,7 +207,7 @@ ova_Open (THIS_PTR, uio_DirHandle *dir, const char *filename)
 #else
 	// With libvorbis ov_time_total returns a double, in seconds.
 	This->length = (float) ov_time_total (&ova->vf, -1);
-#endif  /* OVCODEC_TREMOR */
+#endif  /* OVCODEC_TREMOR *-/
 	
 	if (vinfo->channels == 1)
 		This->format = ova_formats->mono16;
@@ -237,7 +239,7 @@ ova_Decode (THIS_PTR, void* buf, sint32 bufsize)
 #else
 	rc = ov_read (&ova->vf, buf, bufsize, ova_formats->want_big_endian,
 			2, 1, &bitstream);
-#endif  /* OVCODEC_TREMOR */
+#endif  /* OVCODEC_TREMOR *-/
 	
 	if (rc < 0)
 		ova->last_error = rc;
@@ -273,6 +275,6 @@ ova_GetFrame (THIS_PTR)
 	return ova->vf.os->pageno;
 #else
 	return ova->vf.os.pageno;
-#endif  /* OVCODEC_TREMOR */
+#endif  /* OVCODEC_TREMOR *-/
 }
-
+*/

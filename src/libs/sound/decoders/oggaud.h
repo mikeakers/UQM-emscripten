@@ -15,7 +15,7 @@
  */
 
 /* Ogg Vorbis adapter */
-
+/*
 #ifndef OGGAUD_H
 #define OGGAUD_H
 
@@ -24,3 +24,4 @@
 extern TFB_SoundDecoderFuncs ova_DecoderVtbl;
 
 #endif // OGGAUD_H
+*/
